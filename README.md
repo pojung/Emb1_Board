@@ -1,2 +1,2 @@
 # Emb1_Board
-for practice only
+--- This project is for practice only ---
