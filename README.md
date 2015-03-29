@@ -1,5 +1,7 @@
 # Emb1_Board
 --- This project is for practice only ---  
+2015.3.29  13.40 (Wu)
+Progress: Server can run.
   
 2015.3.18  01:30  (Luan)  
 Progress: Client's interface almost done  
