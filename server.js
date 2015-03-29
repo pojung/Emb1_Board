@@ -22,14 +22,21 @@ function handleStaticPage(pathName, res){
 	res.end(fd);
       });
     break;
+    case '.png':
+      res.writeHead(200, {'Content-Type': 'image/png'});
+      fs.readFile('.' + pathName, function(err, fd){
+        res.end(fd);
+      });
+    break;
   }
 }
 
 
 var getRequestHandler = function (req, res) {
   console.log('Got HTTP GET Request');
+  console.log(req.url);
   var pathext = path.extname(req.url);
-  if(pathext === '.css' || pathext === '.js'){
+  if(pathext === '.css' || pathext === '.js' || pathext === '.png'){
 	  handleStaticPage(req.url,res);
   }
   else{
