@@ -34,7 +34,7 @@ function handleStaticPage(pathName, res){
 
 var getRequestHandler = function (req, res) {
   console.log('Got HTTP GET Request');
-  console.log(req.url);
+  //console.log(req.url);
   var pathext = path.extname(req.url);
   if(pathext === '.css' || pathext === '.js' || pathext === '.png'){
 	  handleStaticPage(req.url,res);
