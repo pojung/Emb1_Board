@@ -28,7 +28,7 @@ $(document).ready(function() {
 			var pktAry = JSON.parse(this.responseText);
 			for (var i = 0, len = pktAry.length; i < len; i += 1) {
 				var aPacket = pktAry[i];
-				$("#maxMsgIdField").val(packet._msgId);
+				$("#maxMsgIdField").val(aPacket._msgId);
 				prependNewMsg(aPacket);
 
 			}
@@ -37,7 +37,7 @@ $(document).ready(function() {
 	};
 	$("#refresh").click(retrieveDataFromServer);
 
-	//retrieveDataFromServer();
+	retrieveDataFromServer();
 	var sendMessage = function() {
 		var sender = $("#msgSender").val();
 		var msg = $("#msgBody").val();
